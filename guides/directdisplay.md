@@ -11,5 +11,5 @@ set LB_LIBRARY_PATH="~/.local/share/Steam/steamapps/common/SteamVR/bin" && sudo 
 - Let SteamVR launch; there may be popups about another instance running already, ignore these
 - Open the SteamVR desktop menu and navigate to Developer > Developer Settings
 - Click 'Enable Direct Display Mode' and let SteamVR restart
-- Once restarted, navigate back to Developer Settings and click 'Reset HMD', this will restart your HMD and SteamVR
+- Once restarted, navigate back to Developer Settings and click 'Restart HMD', this will restart your HMD and SteamVR
 - Your monitor should turn black briefly, before the VR view appears on the HMD displays

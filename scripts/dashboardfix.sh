@@ -36,6 +36,7 @@ function fixVRDash {
 	BL="bin/linux64"
 	BVL="bin/vrwebhelper/linux64"
 	VRWH="$SVRDIR/$BVL/vrwebhelper.sh"
+	RWF="resources/webinterface/fonts"
 
 	if [ ! -f "$VRWH" ]; then
 		echo "Could not find $VRWH - exiting"
@@ -47,6 +48,7 @@ function fixVRDash {
 		cp "$VRWH" "${VRWH}-BACKUP"
 		echo "Expanding LD_LIBRARY_PATH in '$VRWH' by adding '$SVRDIR/$BL' and '$SVRDIR/$BVL'"
 		sed "s:LD_LIBRARY_PATH=\"\${STEAM:LD_LIBRARY_PATH=\"$SVRDIR/$BL\:$SVRDIR/$BVL\:\${STEAM:g" -i "$VRWH"
+		
 		BLQP="$SVRDIR/$BL/qt/plugins"
 		if [ -d "$BLQP" ] && [ ! -d "${BLQP}.old" ]; then
 			echo "Creating backup ${BLQP}.old"
@@ -61,12 +63,22 @@ function fixVRDash {
 				echo "System qt5 plugins not found under $SQP"
 			fi
 		fi
+
+		if [ ! -f "$RWF" ]; then
+			echo "Could not find $RWF - skipping"
+		else
+			if ! ls -la | grep -q Motiva-Sans; then
+				echo "Could not find fonts, skipping..."
+			else
+				echo "Creating symlinks for fonts..."
+				ln -s "$RWF/Motiva-Sans-Bold.ttf" "$RWF/motiva-sans-bold.ttf"
+				ln -s "$RWF/Motiva-Sans-Regular.ttf" "$RWF/motiva-sans-bold.ttf"
+			fi
+
+		fi
 	else
 		echo "You already have the dashboard fixes applies - exiting"
 	fi
-
-	#TODO: implement font library fixes, LD_LIBRARY_PATH for system steam script (require sudo)
-
 }
 
 setSteamPaths

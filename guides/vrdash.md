@@ -2,7 +2,7 @@
 
 ### Manual fixes:
 
-- Open Steam and switch SteamVR to the latest beta (I found success with this vs the stable branch)
+- Open Steam and switch SteamVR to the latest release (I found success with this vs the beta & older, linux-specific branches)
 - Cd into `{SteamVR}/bin/vrwebhelper/linux64/` and open `vrwebhelper.sh`. Change `LD_LIBRARY_PATH` to:
 ```shell
 export LD_LIBRARY_PATH="$HOME/.steam/steam/steamapps/common/SteamVR/bin/linux64:$HOME/.steam/steam/steamapps/common/SteamVR/bin/vrwebhelper/linux64:${STEAM_RUNTIME_HEAVY}${LD_LIBRARY_PATH:$LD_LIBRARY_PATH}"

@@ -7,7 +7,6 @@
 
 SQP="/usr/lib/qt/plugins"
 
-#SEARDIR="$!"
 SEARCHDIR="SteamVR"
 
 function setSteamPath {
@@ -68,16 +67,16 @@ function fixVRDash {
 			echo "Could not find $RWF - skipping"
 		else
 			if ! ls -la | grep -q Motiva-Sans; then
-				echo "Could not find fonts, skipping..."
+				echo "Error, could not find fonts, skipping..."
 			else
 				echo "Creating symlinks for fonts..."
 				ln -s "$RWF/Motiva-Sans-Bold.ttf" "$RWF/motiva-sans-bold.ttf"
-				ln -s "$RWF/Motiva-Sans-Regular.ttf" "$RWF/motiva-sans-bold.ttf"
+				ln -s "$RWF/Motiva-Sans-Regular.ttf" "$RWF/motiva-sans-regular.ttf"
 			fi
 
 		fi
 	else
-		echo "You already have the dashboard fixes applies - exiting"
+		echo "You already have the dashboard fixes applied - exiting"
 	fi
 }
 

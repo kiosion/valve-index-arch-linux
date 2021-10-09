@@ -30,7 +30,7 @@ Working on it :)
 
 ### Bad tracking
 
-If the image appears properly on the HMD but doesn't track correctly / has significant lag or stutters - I'm still looking into this, might have something to do with vulkan/specific video drivers. I've had slightly better results after adjusting the custom resolution to 90%, but that's not really a long-term fix.
+If the image appears properly on the HMD but doesn't track correctly / has significant lag or stutters - Specifically in SteavVR Home, and *only* in SteamVR home/dashboard elements for me. Games are fine and run at the HMD's full refresh rate without stutters or input lag. I'm still looking into this, might have something to do with vulkan/specific video drivers. I've had slightly better results after adjusting the custom resolution to 90%, but that's not really a long-term fix.
 
 ---
 

@@ -7,11 +7,13 @@ Guides & scripts for getting the Valve Index & SteamVR working on arch. Listed b
 
 If the HMD stays blank and the image appears as a window in your DE - I've found this is *usually* because Steam didn't receive proper permissions during its initial install of SteamVR. There are likely other (and better) methods to fixing this, but the following steps worked for me (as I don't use a DE & didn't want to setup gnome polkit or an equivalent).
 
+#### Manual steps:
+
 - Ensure SteamVR is installed and set to the latest non-beta release. I had no luck with either the Linux beta or normal SteamVR beta versions.
 - cd to your SteamVR install location (default is `~/.local/share/Steam/steamapps/common/SteamVR`) and run the following command using bash.
 
 ```bash
-set LB_LIBRARY_PATH="~/.local/share/Steam/steamapps/common/SteamVR/bin" && sudo ./vrstartup.sh &
+set LB_LIBRARY_PATH="~/.local/share/Steam/steamapps/common/SteamVR/bin" && sudo ./vrstartup.sh & disown
 ```
 
 - Let SteamVR launch; there may be popups about another instance running already, ignore these
@@ -19,6 +21,10 @@ set LB_LIBRARY_PATH="~/.local/share/Steam/steamapps/common/SteamVR/bin" && sudo 
 - Click 'Enable Direct Display Mode' and let SteamVR restart
 - Once restarted, navigate back to Developer Settings and click 'Restart HMD', this will restart your HMD and SteamVR
 - Your monitor should turn black briefly, before the VR view appears on the HMD displays
+
+#### Script:
+
+Working on it :)
 
 ---
 

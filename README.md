@@ -1,5 +1,6 @@
-## Valve Index on Arch Linux
-Guides & scripts for getting the Valve Index & SteamVR working on arch. Listed below are issues I ran into while getting SteamVR set up with my Index, and have found fixes for. For each issue there's a script that applies the fixes, as well as a manual guide if you prefer to know what changes are being made.
+# Guides & scripts for getting the Valve Index & SteamVR working on arch. 
+
+Listed below are issues I ran into while getting SteamVR set up with my Index, and have found fixes for. For each issue there's a script that applies the fixes, as well as a manual guide if you prefer to know what changes are being made.
 
 ---
 
@@ -60,7 +61,7 @@ exec /usr/lib/steam/steam "$@"
 
 #### Script:
 
-Alternatively, you can clone this repo and run the following script with sudo to automatically apply these fixes: [scripts/dashboardfix.sh](/scripts/dashboardfix.sh)
+Clone this repo and run [scripts/dashboardfix.sh](/scripts/dashboardfix.sh) with sudo to automatically apply these fixes
 
 ---
 

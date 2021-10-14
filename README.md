@@ -1,4 +1,4 @@
-# Steps to get the Valve Index & SteamVR working on Arch Linux
+# Valve Index & SteamVR on Arch Linux
 
 Listed below are issues I ran into while getting SteamVR set up with my Index, and have found fixes for. For each issue there's a script that applies the fixes, as well as a manual guide if you prefer to know what changes are being made.
 

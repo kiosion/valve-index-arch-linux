@@ -15,7 +15,7 @@ If the HMD stays blank and the image appears as a window in your DE - I've found
 
 #### Manual steps:
 
-- Ensure SteamVR is installed and set to the latest non-beta release. I had no luck with either the Linux beta or normal SteamVR beta versions.
+- Ensure SteamVR is installed and set to the latest non-beta release. I had no luck with either the Linux beta or normal SteamVR beta versions. - EDIT: As of 2/11/2021, the latest release doesn't work for me. The Linux Beta branch, however, does.
 - cd to your SteamVR install location (default is `~/.local/share/Steam/steamapps/common/SteamVR`) and run the following command using bash.
 
 ```bash

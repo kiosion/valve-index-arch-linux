@@ -1,5 +1,7 @@
 # Valve Index & SteamVR on Arch Linux / Manjaro
 
+NOTE: I'm no longer experiencing any of the issues these patches fix after the latest SteamVR updates, however I'll leave this repository up in case it's helpful to anyone else :)
+
 Listed below are issues I ran into while getting SteamVR set up with my Index, and have found fixes for. For each issue there's a script that applies the fixes, as well as a manual guide if you prefer to know what changes are being made.
 
 #### Other stuff:

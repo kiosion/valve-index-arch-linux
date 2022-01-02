@@ -15,7 +15,7 @@ Listed below are issues I ran into while getting SteamVR set up with my Index, a
 
 If the HMD stays blank and the image appears as a window in your DE - I've found this is *usually* because Steam didn't receive proper permissions during its initial install of SteamVR. There are likely other (and better) methods to fixing this, but the following steps worked for me (as I don't use a DE & didn't want to setup gnome polkit or an equivalent).
 
-#### Manual steps:
+#### Steps:
 
 - Ensure SteamVR is installed and set to the latest non-beta release. I had no luck with either the Linux beta or normal SteamVR beta versions. - EDIT: As of 2/11/2021, the latest release doesn't work for me. The Linux Beta branch, however, does.
 - cd to your SteamVR install location (default is `~/.local/share/Steam/steamapps/common/SteamVR`) and run the following command using bash.
@@ -30,10 +30,6 @@ set LB_LIBRARY_PATH="~/.local/share/Steam/steamapps/common/SteamVR/bin" && sudo 
 - Once restarted, navigate back to Developer Settings and click 'Restart HMD', this will restart your HMD and SteamVR
 - Your monitor should turn black briefly, before the VR view appears on the HMD displays
 
-#### Script:
-
-Working on it :)
-
 ---
 
 ### Bad tracking
@@ -46,7 +42,7 @@ If the image appears properly on the HMD but doesn't track correctly / has signi
 
 If VRDashboard doesn't launch, controller menu buttons don't work, and/or in-game Steam notifications don't appear.
 
-#### Manual steps:
+#### Steps:
 
 - Open Steam and switch SteamVR to the latest release (I found success with this vs the beta & older, linux-specific branches)
 - Cd into `{SteamVR}/bin/vrwebhelper/linux64/` and open `vrwebhelper.sh`. Change `LD_LIBRARY_PATH` to:
@@ -68,7 +64,7 @@ exec /usr/lib/steam/steam "$@"
 
 #### Script:
 
-Clone this repo and run [scripts/dashboardfix.sh](/scripts/dashboardfix.sh) with sudo to automatically apply these fixes
+Clone this repo and run [scripts/dashboardfix.sh](/scripts/dashboardfix.sh) as root to automatically apply these fixes
 
 ---
 
